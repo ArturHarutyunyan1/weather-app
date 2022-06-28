@@ -1,3 +1,4 @@
+const container = document.querySelector('.container')
 const form      = document.querySelector('.searchForm')
 const input     = document.querySelector('.searchValue')
 const sidebar   = document.querySelector('.sidebar')
@@ -75,7 +76,7 @@ form.addEventListener('submit', (e)=>{
 async function getWeatherForecast(cityID){
     try {
         showLoader()
-        const res  = await fetch(`http://api.openweathermap.org/data/2.5/forecast?id=${cityID}&appid=${apiKey}`)
+        const res  = await fetch(`https://api.openweathermap.org/data/2.5/forecast?id=${cityID}&appid=${apiKey}`)
         const data = await res.json()
         displayForecast(data)
         console.log(data);
@@ -272,13 +273,15 @@ hamburger.addEventListener('click', ()=>{
 })
 
 function showLoader(){
+    container.classList.add('loading')
     if(loader.classList.contains('loaded')){
         loader.classList.remove('loaded')
     }
 }
 
 function hideLoader(){
-    loader.classList.add('loaded')
+    loader.classList.add('loaded-loader')
+    container.classList.replace('loading', 'loaded')
 }
 
 getClientIP()
