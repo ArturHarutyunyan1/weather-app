@@ -94,55 +94,65 @@ function displayWeatherData(data){
     let date   = new Date()
     
     if(data.weather[0].main == 'Clear'){
+        showLoader()
             body.classList.add('clear')
             body.classList.remove('rain')
             body.classList.remove('thunderstorm')
             body.classList.remove('snow')
             body.classList.remove('clouds')
+            hideLoader()
         if(isDayTime){
             url = './img/clear-day.svg'
         }else{
             url = './img/clear-night.svg'
         }
     }else if(data.weather[0].main == 'Clouds'){
+        showLoader()
             body.classList.remove('clear')
             body.classList.remove('rain')
             body.classList.remove('thunderstorm')
             body.classList.remove('snow')
             body.classList.add('clouds')
+            hideLoader()
         if(isDayTime){
             url = './img/partly-cloudy-day.svg'
         }else{
             url = './img/partly-cloudy-night.svg'
         }
     }else if(data.weather[0].main == 'Rain'){
+        showLoader()
             body.classList.remove('clear')
             body.classList.add('rain')
             body.classList.remove('thunderstorm')
             body.classList.remove('snow')
             body.classList.remove('clouds')
+            hideLoader()
         if(isDayTime){
             url = './img/partly-cloudy-day-rain.svg'
         }else{
             url = './img/partly-cloudy-night-rain.svg'
         }
     }else if(data.weather[0].main == 'Thunderstorm'){
+        showLoader()
             body.classList.remove('clear')
             body.classList.remove('rain')
             body.classList.add('thunderstorm')
             body.classList.remove('snow')
             body.classList.remove('clouds')
+            hideLoader()
         if(isDayTime){
             url = './img/thunderstorms-day.svg'
         }else{
             url = './img/thunderstorms-night.svg'
         }
     }else if(data.weather[0].main == 'Snow'){
+        showLoader()
             body.classList.remove('clear')
             body.classList.remove('rain')
             body.classList.remove('thunderstorm')
             body.classList.remove('snow')
             body.classList.add('clouds')
+            hideLoader()
         if(isDayTime){
             url = './img/partly-cloudy-day-snow.svg'
         }else{
