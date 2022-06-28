@@ -12,7 +12,6 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-size: cover;
   transition: 1s;
   color: white;
 }
@@ -25,7 +24,7 @@ body{
   background: rgba(255, 255, 255, 0.15);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(7.8px);
+  backdrop-filter: blur(20.8px);
   -webkit-backdrop-filter: blur(7.8px);
   transition: 0.7s ease-out;
 }
@@ -39,8 +38,9 @@ body{
   background: rgba(255, 255, 255, 0.15);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(7.8px);
+  backdrop-filter: blur(20.8px);
   -webkit-backdrop-filter: blur(7.8px);
+  transition: 0.7s ease-out;
 }
 
 .input-line{
@@ -95,8 +95,9 @@ i{
   background: rgba(255, 255, 255, 0.15);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(7.8px);
+  backdrop-filter: blur(20.8px);
   -webkit-backdrop-filter: blur(7.8px);
+  transition: 0.7s ease-out;
 }
 
 .details h1{
@@ -129,6 +130,7 @@ i{
   background: white;
   margin: 5px 0;
   display: block;
+  transition: 0.3s ease-out;
 }
 
 .author{
@@ -369,41 +371,6 @@ i{
   }
 }
 
-.loading{
-  transform: scale(0.7);
-  opacity: 0;
-}
-
 .loaded{
-  transform: scale(1);
-  opacity: 1;
-}
-
-.loaded-loader{
   display: none;
-}
-
-.clear{
-  background: url('./img/sun.jpg') no-repeat center;
-  background-size: cover;
-}
-
-.clouds{
-  background: url('./img/cloud.jpg') no-repeat center;
-  background-size: cover;
-}
-
-.rain{
-  background: url('./img/rain.jpg') no-repeat center;
-  background-size: cover;
-}
-
-.thunderstorm{
-  background: url('./img/lightning.jpg') no-repeat center;
-  background-size: cover;
-}
-
-.snow{
-  background: url('./img/snow.jpg') no-repeat center;
-  background-size: cover;
 }

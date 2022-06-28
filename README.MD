@@ -5,6 +5,7 @@ Weather app using [Openweahtermap API](https://openweathermap.org/api) and [IP G
 ![](./img/Screenshot_1.jpg)
 ![](./img/Screenshot_2.jpg)
 ![](./img/Screenshot_3.jpg)
+
 ### Built with
 
 - Semantic HTML5 markup
@@ -22,7 +23,7 @@ Weather app using [Openweahtermap API](https://openweathermap.org/api) and [IP G
 - [Scary forest photo created by wirestock](https://www.freepik.com/photos/scary-forest)
 - [Maple tree photo created by wirestock](https://www.freepik.com/photos/maple-tree)
 - [Storm photo created by wirestock](https://www.freepik.com/photos/storm)
-- [Winter nature photo created by wirestock](https://www.freepik.com/photos/winter-nature)
+- [Winter sky photo created by standret](https://www.freepik.com/photos/winter-sky)
 - [Css Glass](https://css.glass/)
 
 ### Author

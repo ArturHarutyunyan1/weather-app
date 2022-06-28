@@ -1,9 +1,9 @@
-const container = document.querySelector('.container')
 const form      = document.querySelector('.searchForm')
 const input     = document.querySelector('.searchValue')
 const sidebar   = document.querySelector('.sidebar')
 const hamburger = document.querySelector('.hamburger')
 const loader    = document.querySelector('.loader')
+const images    = ['./img/clear.jpg', './img/cloud.jpg', './img/rain.jpg', './img/thunderstorm.jpg', './img/snow.jpg']
 const apiKey    = 'ab099c415ea5facca26607978a744fb2'
 const hours     = new Date().getHours()
 const isDayTime = hours > 6 && hours < 20
@@ -94,65 +94,40 @@ function displayWeatherData(data){
     let date   = new Date()
     
     if(data.weather[0].main == 'Clear'){
-        showLoader()
-            body.classList.add('clear')
-            body.classList.remove('rain')
-            body.classList.remove('thunderstorm')
-            body.classList.remove('snow')
-            body.classList.remove('clouds')
-            hideLoader()
+        body.style.background     = `url('${images[0]}') no-repeat center`
+        body.style.backgroundSize = 'cover'
         if(isDayTime){
             url = './img/clear-day.svg'
         }else{
             url = './img/clear-night.svg'
         }
     }else if(data.weather[0].main == 'Clouds'){
-        showLoader()
-            body.classList.remove('clear')
-            body.classList.remove('rain')
-            body.classList.remove('thunderstorm')
-            body.classList.remove('snow')
-            body.classList.add('clouds')
-            hideLoader()
+        body.style.background     = `url('${images[1]}') no-repeat center`
+        body.style.backgroundSize = 'cover'
         if(isDayTime){
             url = './img/partly-cloudy-day.svg'
         }else{
             url = './img/partly-cloudy-night.svg'
         }
     }else if(data.weather[0].main == 'Rain'){
-        showLoader()
-            body.classList.remove('clear')
-            body.classList.add('rain')
-            body.classList.remove('thunderstorm')
-            body.classList.remove('snow')
-            body.classList.remove('clouds')
-            hideLoader()
+        body.style.background     = `url('${images[2]}') no-repeat center`
+        body.style.backgroundSize = 'cover'
         if(isDayTime){
             url = './img/partly-cloudy-day-rain.svg'
         }else{
             url = './img/partly-cloudy-night-rain.svg'
         }
     }else if(data.weather[0].main == 'Thunderstorm'){
-        showLoader()
-            body.classList.remove('clear')
-            body.classList.remove('rain')
-            body.classList.add('thunderstorm')
-            body.classList.remove('snow')
-            body.classList.remove('clouds')
-            hideLoader()
+        body.style.background     = `url('${images[3]}') no-repeat center`
+        body.style.backgroundSize = 'cover'
         if(isDayTime){
             url = './img/thunderstorms-day.svg'
         }else{
             url = './img/thunderstorms-night.svg'
         }
     }else if(data.weather[0].main == 'Snow'){
-        showLoader()
-            body.classList.remove('clear')
-            body.classList.remove('rain')
-            body.classList.remove('thunderstorm')
-            body.classList.remove('snow')
-            body.classList.add('clouds')
-            hideLoader()
+        body.style.background     = `url('${images[4]}') no-repeat center`
+        body.style.backgroundSize = 'cover'
         if(isDayTime){
             url = './img/partly-cloudy-day-snow.svg'
         }else{
@@ -283,15 +258,13 @@ hamburger.addEventListener('click', ()=>{
 })
 
 function showLoader(){
-    container.classList.add('loading')
     if(loader.classList.contains('loaded')){
         loader.classList.remove('loaded')
     }
 }
 
 function hideLoader(){
-    loader.classList.add('loaded-loader')
-    container.classList.replace('loading', 'loaded')
+    loader.classList.add('loaded')
 }
 
 getClientIP()
