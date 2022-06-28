@@ -1,0 +1,30 @@
+# Weather App
+
+Weather app using [Openweahtermap API](https://openweathermap.org/api) and [IP Geolocation API](https://geo.ipify.org)
+
+![](./img/screenshot_1.jpg)
+![](./img/screenshot_2.jpg)
+![](./img/screenshot_3.jpg)
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- JavaScript
+- Mobile-first workflow
+
+
+### Useful resources
+
+- [Icons](https://bas.dev/work/meteocons)
+- [Background Images](www.freepik.com)
+- [Alps photo created by wirestock](https://www.freepik.com/photos/alps)
+- [Scary forest photo created by wirestock](https://www.freepik.com/photos/scary-forest)
+- [Maple tree photo created by wirestock](https://www.freepik.com/photos/maple-tree)
+- [Storm photo created by wirestock](https://www.freepik.com/photos/storm)
+- [Winter nature photo created by wirestock](https://www.freepik.com/photos/winter-nature)
+- [Css Glass](https://css.glass/)
+
+### Author
+
+- [Artur Harutyunyan](https://github.com/ArturHarutyunyan1)

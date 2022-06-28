@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  transition: 1s;
+  color: white;
+}
+
+.container{
+  position: relative;
+  width: 80%;
+  height: 80%;
+  font-family: 'Anek Malayalam', sans-serif;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.8px);
+  -webkit-backdrop-filter: blur(7.8px);
+}
+
+.sidebar{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.8px);
+  -webkit-backdrop-filter: blur(7.8px);
+}
+
+.input-line{
+  width: 90%;
+  height: 50px;
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.8px);
+  -webkit-backdrop-filter: blur(7.8px);
+}
+
+.searchValue{
+  width: 70%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  margin: 0 15px;
+  color: black;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.input-line button{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+i{
+  color: white;
+}
+
+.details{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 90%;
+  height: 300px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.8px);
+  -webkit-backdrop-filter: blur(7.8px);
+}
+
+.details h1{
+  text-align: center;
+}
+
+.details .col{
+  width: 70%;
+  margin: 25px auto;
+  font-size: 20px;
+}
+
+.space-btw{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  display: none;
+  cursor: pointer;
+}
+
+.bar{
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 5px 0;
+  display: block;
+}
+
+.author{
+  position: absolute;
+  bottom: 10px;
+  color: white;
+}
+
+.author a{
+  color: royalblue;
+  text-decoration: none;
+}
+
+.weather{
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  padding: 3.5rem 0;
+}
+
+.col{
+  width: 50%;
+  text-align: center;
+}
+
+.temp{
+  font-size: 50px;
+}
+
+.city{
+  font-size: 30px;
+}
+
+.weather-icon{
+  width: 150px;
+}
+
+.row{
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.row-item{
+  width: 150px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Anek Malayalam', sans-serif;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.8px);
+  -webkit-backdrop-filter: blur(7.8px);
+}
+
+.row-item img{
+  width: 70px;
+}
+
+@media (max-width: 1024px){
+  .hamburger{
+    display: block;
+  }
+  .sidebar{
+    position: absolute;
+    width: 100%;
+    background: white;
+    font-weight: normal;
+    color: black;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.3s cubic-bezier(1, 0, 0, 1);
+  }
+  .weather{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+  }
+  .active{
+    transform: scale(1);
+    opacity: 1;
+  }
+  .author{
+    color: black;
+  }
+  .input-line{
+    margin: 50px auto;
+  }
+  i{
+    color: white;
+  }
+  .hamburger.active .bar{
+    background: black;
+  }
+  .hamburger.active{
+    left: 0;
+  }
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px)rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px)rotate(-45deg);
+  }
+}
+
+@media (max-width: 768px){
+  .container{
+    width: 100%;
+    height: auto;
+  }
+  .temp{
+    font-size: 30px;
+  }
+  .city{
+    font-size: 25px;
+  }
+  .row{
+    flex-direction: column;
+  }
+  .row-item{
+    width: 100%;
+    height: 50px;
+    margin: 5px 0;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .row-item img{
+    width: 40px;
+  }
+}
+
+.loader{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loaded{
+  display: none;
+}
+
+.clear{
+  background: url('./img/sun.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.clouds{
+  background: url('./img/cloud.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.rain{
+  background: url('./img/rain.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.thunderstorm{
+  background: url('./img/lightning.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.snow{
+  background: url('./img/snow.jpg') no-repeat center;
+  background-size: cover;
+}
