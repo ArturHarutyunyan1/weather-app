@@ -193,7 +193,7 @@ function displayForecast(data){
         alert('Make sure you spell the city correctly')
         hideLoader()
     }
-    for(let i = 0; i < data.list.length - 34; i++){
+    for(let i = 0; i < data.list.length - 33; i++){
             const row = document.querySelector('.row')
             const rowItem = document.createElement('div')
             let url 
