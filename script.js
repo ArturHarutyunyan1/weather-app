@@ -69,6 +69,7 @@ form.addEventListener('submit', (e)=>{
             cityID = data.id
             getWeatherForecast(cityID)
             displayWeatherData(data)
+            input.value = ''
         })
     }
 })
@@ -79,7 +80,6 @@ async function getWeatherForecast(cityID){
         const res  = await fetch(`https://api.openweathermap.org/data/2.5/forecast?id=${cityID}&appid=${apiKey}`)
         const data = await res.json()
         displayForecast(data)
-        console.log(data);
     } catch (error) {
         console.error(error);
     }
@@ -193,13 +193,12 @@ function displayForecast(data){
         alert('Make sure you spell the city correctly')
         hideLoader()
     }
-    for(let i = 0; i < data.list.length - 36; i++){
+    for(let i = 0; i < data.list.length - 33; i++){
             const row = document.querySelector('.row')
             const rowItem = document.createElement('div')
             let url 
             row.append(rowItem)
-            console.log(data.list[i]);
-            rowItem.classList.add('row-item')
+            rowItem.classList.add('row-item', 'glass')
 
             if(data.list[i].weather[0].main == 'Clear'){
                 if(isDayTime){
