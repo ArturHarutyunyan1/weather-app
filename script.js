@@ -28,7 +28,7 @@ async function getClientIP(){
 async function getClientIPData(){
     try {
         showLoader()
-        const res  = await fetch(`https://geo.ipify.org/api/v2/country?apiKey=at_pxdirO1Ys3eP75aupM48q2lGrB7ap&ipAddress=${clientIP}`)
+        const res  = await fetch(`https://geo.ipify.org/api/v2/country?apiKey=at_NK0T54ViEPLTqUEEzgSbAh387MGgX&ipAddress=${clientIP}`)
         const data = await res.json()
         clientAddress = data.location.region
         getWeatherData(clientAddress)
@@ -193,7 +193,7 @@ function displayForecast(data){
         alert('Make sure you spell the city correctly')
         hideLoader()
     }
-    for(let i = 0; i < data.list.length - 33; i++){
+    for(let i = 0; i < data.list.length - 34; i++){
             const row = document.querySelector('.row')
             const rowItem = document.createElement('div')
             let url 
