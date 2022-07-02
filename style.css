@@ -171,7 +171,7 @@ i{
 .row-item{
   width: 150px;
   height: 180px;
-  margin: 5px;
+  margin: 7px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -362,7 +362,6 @@ i{
     transform: rotate(360deg);
   }
 }
-
 
 .loaded{
   display: none;
