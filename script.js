@@ -28,7 +28,7 @@ async function getClientIP(){
 async function getClientIPData(){
     try {
         showLoader()
-        const res  = await fetch(`https://geo.ipify.org/api/v2/country?apiKey=at_NK0T54ViEPLTqUEEzgSbAh387MGgX&ipAddress=${clientIP}`)
+        const res  = await fetch(`https://geo.ipify.org/api/v2/country?apiKey=at_z21iQeHhr6AGrZcRjPNPmfIw7dYxV&ipAddress=${clientIP}`)
         const data = await res.json()
         clientAddress = data.location.region
         getWeatherData(clientAddress)
