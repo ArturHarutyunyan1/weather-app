@@ -4,7 +4,8 @@ const sidebar   = document.querySelector('.sidebar')
 const hamburger = document.querySelector('.hamburger')
 const loader    = document.querySelector('.loader')
 const images    = ['./img/clear.jpg', './img/cloud.jpg', './img/rain.jpg', './img/thunderstorm.jpg', './img/snow.jpg']
-const apiKey    = 'at_B97MYGfO3KAuXEPc0D8hKD6SsjUhn'
+const apiKey    = '55abf70da848e9c02b8c668f66d0e9e3'
+const apiKey1   = 'at_B97MYGfO3KAuXEPc0D8hKD6SsjUhn'
 const hours     = new Date().getHours()
 const isDayTime = hours > 6 && hours < 20
 
@@ -28,7 +29,7 @@ async function getClientIP(){
 async function getClientIPData(){
     try {
         showLoader()
-        const res  = await fetch(`https://geo.ipify.org/api/v2/country?apiKey=at_z21iQeHhr6AGrZcRjPNPmfIw7dYxV&ipAddress=${clientIP}`)
+        const res  = await fetch(`https://geo.ipify.org/api/v2/country?apiKey=${apiKey1}&ipAddress=${clientIP}`)
         const data = await res.json()
         clientAddress = data.location.region
         getWeatherData(clientAddress)
