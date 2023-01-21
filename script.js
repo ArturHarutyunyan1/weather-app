@@ -4,8 +4,8 @@ const sidebar   = document.querySelector('.sidebar')
 const hamburger = document.querySelector('.hamburger')
 const loader    = document.querySelector('.loader')
 const images    = ['./img/clear.jpg', './img/cloud.jpg', './img/rain.jpg', './img/thunderstorm.jpg', './img/snow.jpg']
-const apiKey    = '55abf70da848e9c02b8c668f66d0e9e3'
-const apiKey1   = 'at_B97MYGfO3KAuXEPc0D8hKD6SsjUhn'
+const apiKey    = ''
+const apiKey1   = ''
 const hours     = new Date().getHours()
 const isDayTime = hours > 6 && hours < 20
 
